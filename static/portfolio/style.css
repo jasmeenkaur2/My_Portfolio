@@ -1,0 +1,342 @@
+/* Common section container class */
+.section-container {
+    max-width: 1200px;
+    margin: 0 auto 150px auto; /* Center align and add bottom margin */
+    padding: 0 20px; /* Add padding for left and right */
+}
+
+/* About Me Section */
+#about {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents overflow from spilling outside the container */
+}
+
+#about h3 {
+    font-size: 2.5rem;
+    color: #1D2D50; /* Dark Blue */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#about p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Skills Section */
+#skills {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.skills-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Prevents overflow from spilling outside the container */
+}
+
+#skills h3 {
+    font-size: 2.5rem;
+    color: #1D2D50; /* Dark Blue */
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#skills p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    justify-items: center; /* Centering items horizontally */
+    grid-auto-rows: minmax(150px, auto); /* Ensure uniform row heights */
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; /* Center text under each logo */
+}
+
+.skill-item h4 {
+    font-size: 1rem;
+    color: #333;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.skill-logo {
+    width: 50px; /* Logo width */
+    height: 50px; /* Logo height */
+    filter: invert(33%) sepia(81%) saturate(356%) hue-rotate(182deg) brightness(94%) contrast(90%); /* Dark Blue Filter */
+    transition: transform 0.3s ease;
+}
+
+/* Hover effect for logos */
+.skill-item:hover .skill-logo {
+    transform: scale(1.1);
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 768px) {
+    .about-container {
+        padding: 20px;
+    }
+
+    #about h3 {
+        font-size: 1.8rem;
+    }
+
+    .skills-container {
+        padding: 20px;
+    }
+
+    #skills h3 {
+        font-size: 1.8rem;
+    }
+
+    .skills-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 items per row on small screens */
+    }
+
+    .skill-item h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Projects Section */
+#projects {
+    padding: 60px 0;
+    background-color: #FFFFFF; /* White background for contrast */
+    text-align: center;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    color: #1D2D50; /* Dark Blue */
+    margin-bottom: 40px;
+}
+
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.project {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project:hover img {
+    transform: scale(1.1);
+}
+
+.project h3 {
+    font-size: 1.5rem;
+    margin: 20px 0 10px;
+    color: #1D2D50;
+}
+
+.project p {
+    color: #666;
+    font-size: 1rem;
+    padding: 0 15px 15px;
+    height: 80px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #1D2D50;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #FFDD57; /* Bright Yellow for CTA */
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.project a:hover {
+    background-color: #1D2D50;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* General form container */
+#contact {
+    padding: 50px 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    color: #333;
+}
+
+.contact-container {
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 30px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #007BFF; /* Blue on focus */
+}
+
+.form-group textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* Submit button */
+.submit-btn {
+    background-color: #007BFF; /* Blue */
+    color: white;
+    font-size: 1.1rem;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3; /* Darker Blue on hover */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 20px;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #1D2D50;
+    text-align: center;
+    color: white;
+    padding: 30px 0;
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .project-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project {
+        width: 100%;
+    }
+
+    .project img {
+        height: 200px;
+    }
+
+    .tab-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tab-section div {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+}
